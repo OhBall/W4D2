@@ -23,6 +23,6 @@ class Cat < ApplicationRecord
     dependent: :destroy
 
   def age
-    (Date.today - self.birth_date)/365
+    (Date.today - self.birth_date).to_i / 365
   end
 end

@@ -14,10 +14,21 @@ class CatRentalRequest < ApplicationRecord
   belongs_to :cat
 
   def overlapping_requests
-    current_cat_requests = CatRentalRequest.where(cat_id: self.cat_id)
+    CatRentalRequest.where(cat_id: self.cat_id)
       .where.not(id: self.id)
       .where.not("start_date > :end_date OR end_date < :start_date", start_date: start_date, end_date: end_date)
   end
 
+  def overlapping_approved_requests
+    overlapping_requests.where(status: 'APPROVED')
+  end
+
+  def does_not_overlap_approved_request
+    !overlapping_approved_requests.exists?
+  end
+
+  # def valid?
+  #   does_not_overlap_approved_request
+  # end
 
 end

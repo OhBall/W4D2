@@ -12,7 +12,7 @@ birth_dates = ['2050-12-05', '1993-04-23', '1990-04-27']
 colors = ['Green', 'Calico', 'Blue']
 names = ['Tickles', 'Chairman Meow', 'Pickles']
 sexes = ['M', 'F', 'M']
-descriptions = ['Very ticklish cat that loves milk and yarn', 
+descriptions = ['Very ticklish cat that loves milk and yarn',
 'Representative of the kitties playhouse thing',
 'Brind #no cumbers']
 
