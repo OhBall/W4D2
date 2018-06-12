@@ -1,0 +1,14 @@
+<h1> <%= @cat.name %> </h1>
+
+<table>
+  <tr>
+    <% @cat.attributes.each_key do |key| %>
+      <th><%= "#{key}" %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @cat.attributes.each_value do |v|%>
+       <td> <%= "#{v}" %> </td>
+    <% end %>
+  </tr>
+</table>
